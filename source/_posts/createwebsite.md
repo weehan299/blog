@@ -4,6 +4,7 @@ date: 2020-06-28 20:56:13
 tags: [web dev]
 Category: 
 - Code
+comments: false
 ---
 ## Here was how I get started on creating my first static website!
 
