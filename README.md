@@ -1,4 +1,4 @@
-# Wee Han's blog
+# Wee Han's Website
 
 
-You can find my blog at www.weehan.xyz
+You can find my website at www.weehan.xyz
