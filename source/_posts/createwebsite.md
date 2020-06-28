@@ -1,9 +1,9 @@
 ---
 title: My first (static) website
 date: 2020-06-28 20:56:13
-tags: [web dev]
-Category: 
-- Code
+tags: 
+- webdev
+intro: "These are some steps you can take to create your own static website too"
 comments: false
 ---
 ## Here was how I get started on creating my first static website!

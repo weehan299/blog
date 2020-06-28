@@ -107,3 +107,13 @@ deploy:
   type: git
   repo: https://github.com/weehan299/staticblog.git
   branch: master
+
+
+about : {
+  name : "Tan Wee Han", 
+  intro1 : "Aspiring academic",
+  intro2 : "NUS Psychology Student",
+  email : "weehan299@outlook.com",
+  github : "https://github.com/weehan299",
+  linkedin : "https://www.linkedin.com/in/weehan-tan-935742186/",
+}
