@@ -90,26 +90,11 @@ include:
 exclude:
 ignore:
 
-math:
-  engine: 'mathjax' # or 'katex'
-  mathjax:
-    src: "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js"
-    config:
-      # MathJax config
-      tex2jax:
-        inlineMath: [ ['$','$'], ["\\(","\\)"] ]
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        processEscapes: true
-      TeX:
-        equationNumbers:
-          autoNumber: "AMS"
-      extensions: ["tex2jax.js"]
-      jax: ["input/TeX", "output/HTML-CSS"]
-
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: clexy
+
 
 prism_plugin:
   mode: 'preprocess'    # realtime/preprocess
