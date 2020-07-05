@@ -5,7 +5,7 @@ tags:
 - R
 - SpssToR
 categories: 
-- Project
+- r
 intro: "Applying Chi Square statistic in R"
 comments: false
 ---
