@@ -132,3 +132,27 @@ sudo systemctl restart nginx
 Actually setting up your own static website is not as hard as it seems. A lot of the low level configuration have been abstracted away. All you need to do is to key in some details and you can get your own website for a resonable price.
 
 
+## Themes and Extra configuration
+In Hexo, there are a myriad of themes [available](https://hexo.io/themes/). The themes utilises ".ejs" file extensions which are called embedded javascript. It allows you to use javascript within HTML without the need for a script tag. There are other themes that uses other kinds of templating engine such as Jade or Pug which works in a similar way but with a different (more difficult, in my opinion) syntax. The advantage of using Hexo can be seen in the modularity of the themes where you can just plug and play without the need to intall additional packages. 
+
+However, some of the themes are not very well maintained and themes that uses another kind of templating engine apart from the official one (ejs) has much trouble being compatible with other plugins. 
+
+The theme I am using is called [clexy](https://github.com/mkkhedawat/clexy) which uses Jade as its templating engine. While it may be more difficult to pair with other plugins, I do enjoy the styling of this theme quite a bit. 
+
+#### Configuring Math support
+In hexos, there are multiple plugins that supports rendering of LaTex in markdown files. However, the theme I used made it very hard for me to install other plugins so I decided to find other ways to allow for Math support. 
+
+I came across MathJax which is a display engine that works on almost any platform. After a few bits of tinkering, I managed to find a way to add Latex support onto my posts. All you need to do is to inject this piece of code into your layout file and Latex should work in the markdown posts.
+
+```jade
+script(type='text/x-mathjax-config').
+    MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+      });
+script(type='text/javascript', src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML', async)
+```
+
+Overall I am quite satisfied with the configuration of my website as it allows me to easily create new posts and upload them to the VPS server. Hopefully I would have more time in the future to continously update this website. 
+
+
+
