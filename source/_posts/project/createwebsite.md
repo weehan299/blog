@@ -16,10 +16,10 @@ I used Nginx to create a private server to host my static webpage on it. For web
 ### Setting up a VPS Server
 I use an VPS server to store the static files of my website. All you need to do is to find any VPS hosting services online. I use [vultr](https://www.vultr.com/) which has a very user friendly set up process. 
 
-All you have to do is to specify the type of server that you want I chose a Debian instance of the server. Then I selected the cheapest server size, you do not need a large server if you do not anticipate a lot of traffic to your website. After that, you just need to specify the username which you will use to ssh into the server and you are done. 
+All you have to do is to specify the type of server that you want. I chose a Debian instance of the server. Then, I selected the cheapest server size. You do not need a large server if you do not anticipate a lot of traffic to your website. Finally, just specify the username which you will use to ssh into the server and you are done. 
 
 ### Getting a domain name
-Next you will need a domain name for your website. This service is also provided by a slew DNS providers online. 
+Next, you will need a domain name for your website. This service is also provided by a slew DNS providers online. 
 
 I chose [epik.com](https://www.epik.com/) As it is also very easy to configure and link the domain name to your VPS server. Find a domain name that you like and buy it. Common domain suffixes like ".com" or ".net" are usually quite expensive. Therefore i chose an unusual one ".xyz" which only costs me $2 per year. 
 
