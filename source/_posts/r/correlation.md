@@ -1,7 +1,7 @@
 ---
 title: Correlation
 date: 2020-07-05 17:01:47
-intro: Correlation in R
+intro: Applying correlation in R
 tags:
 - R
 - SpssToR
