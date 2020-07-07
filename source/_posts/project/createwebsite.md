@@ -11,7 +11,6 @@ comments: false
 
 ## Here was how I get started on creating my first static website!
 
-I used Nginx to create a private server to host my static webpage on it. For web framework, I decided on using hexo as I wanted to focus more on writing prose instead of code. Hexo's support of using markdown as a default way to create posts is very convenient for me.
 
 ### Setting up a VPS Server
 I use an VPS server to store the static files of my website. All you need to do is to find any VPS hosting services online. I use [vultr](https://www.vultr.com/) which has a very user friendly set up process. 
@@ -27,7 +26,7 @@ After that, link your VPS server to your domain name by going to the DNS records
 
 ### Hexo Installation process
 
-Installing hexos is quite easy if you are familiar with Nodejs. First, you can install the command line interface. 
+For web framework, I decided on using hexo as I wanted to focus more on writing prose instead of code. Hexo's support of using markdown as a default way to create posts is very convenient for this purpose. Installing hexos is quite easy if you are familiar with Nodejs. First, you can install the command line interface. 
 
 I downloaded hexo-server and hexo-browsersync too which are tools for automatic browser reloading.
 
@@ -71,12 +70,16 @@ After you have finished creating your posts, you can generate your static files 
 $ hexo generate
 ```
 
-### Deploying your static folder to Nginx
+## Setting up Nginx
+I used Nginx (pronounced "engine x") to create to host my static webpage on it. Installing Nginx on your VPS server is relatively straightforward as all you need to do is install it via your package manager.
+```bash
+$ sudo apt install nginx
+```
 
+### Deploying your static folder to Nginx
 In order to deploy the static folder to Nginx, we have to push the static folder onto github first, then pull the folder from Nginx. First, we have to edit the \_config.yml file that can be found in your blog's root directory.
 
-Go to the bottom of the \_config.yml file
-Under the repo section, add the http link that you use to clone the repository as shown: 
+Go to the bottom of the \_config.yml file. Under the repo section, add the http link that you use to clone the repository as shown: 
 
 ```yml
 # Deployment
@@ -96,12 +99,10 @@ $ hexo generate
 $ hexo deploy
 ```
 
-### configure your ssh server and set up Nginx
-
-First, ssh into your private server and create a new directory. After that pull your static folder repo into your blog's folder.
+Then, ssh into your VPS server and create a new directory in "/var/www/\<website name\>". Finally pull your static folder repo into your blog's folder.
 ```bash
-$ mkdir -p /var/www/<blogname>
-$ cd /var/www/blogname
+$ mkdir -p /var/www/<website name>
+$ cd /var/www/<website name>
 $ git clone <repo link>
 ```
 Then, add a basic server block to your nginx configuration to the directory: /etc/nginx/sites-available/ 
@@ -133,9 +134,9 @@ Actually setting up your own static website is not as hard as it seems. A lot of
 
 
 ## Themes and Extra configuration
-In Hexo, there are a myriad of themes [available](https://hexo.io/themes/). The themes utilises ".ejs" file extensions which are called embedded javascript. It allows you to use javascript within HTML without the need for a script tag. There are other themes that uses other kinds of templating engine such as Jade or Pug which works in a similar way but with a different (more difficult, in my opinion) syntax. The advantage of using Hexo can be seen in the modularity of the themes where you can just plug and play without the need to intall additional packages. 
+In Hexo, there are a myriad of themes [available](https://hexo.io/themes/). The themes utilises ".ejs" file extensions which are called embedded javascript. It allows you to use javascript within HTML without the need for a script tag. There are other themes that uses other kinds of templating engine such as Jade or Pug which works in a similar way but with a different (more difficult, in my opinion) syntax. The advantage of using Hexo can be seen in the modularity of the themes where you can just plug and play without the need to install additional packages. 
 
-However, some of the themes are not very well maintained and themes that uses another kind of templating engine apart from the official one (ejs) has much trouble being compatible with other plugins. 
+However, some of the themes are not very well maintained and themes that uses another kind of templating engine apart from the official one (ejs) has trouble being compatible with other plugins. 
 
 The theme I am using is called [clexy](https://github.com/mkkhedawat/clexy) which uses Jade as its templating engine. While it may be more difficult to pair with other plugins, I do enjoy the styling of this theme quite a bit. 
 
