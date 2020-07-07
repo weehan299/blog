@@ -64,11 +64,11 @@ $$\text{total error} = \sum^n\_{i=1} (\text{observed}\_i - \text{model}\_i)^2$$
 
 However, we have to first compare whether our model is better at prediction than just random chance. So we need to compare our model with some kind of baseline to see how much better it does in predicting the outcome. This can be done by using the mean of the experimental values as our baseline model. i.e. If our model is pure noise, the values we predict will be no better than just using the mean of the resuls. Using the formula above we can then calculating the total error of this baseline model using:
 
-$$SS\_T = (Y\_i-M\_Y)^2$$, where Y is your experimental values and $M\_Y$ is the mean. This is known as **total sum of squares ($SS\_T$)**.
+$$SS\_T = \sum^n\_{i=1}(Y\_i-M\_Y)^2$$, where $Y_i$ is your experimental value, $M\_Y$ is the mean and $n$ is the number of participants in your dataset. This is known as **total sum of squares ($SS\_T$)**.
 
 We can also calculate the total error our own regression model using the same formula, but this time we use our own predicted Y value ($\hat{Y}$) for comparison with the actual experiental values.
 
-$$SS\_T = (Y - \hat{Y})^2$$, this is also known as your **residual sum of squares ($SS\_{R}$)**.
+$$SS\_T = \sum^n\_{i=1}(Y\_i - \hat{Y})^2$$, this is also known as your **residual sum of squares ($SS\_{R}$)**.
 
 Using the regression results above, we can see use the intercept and the slope of the regression to form a regression equation in R. Y.pred in our example will be the predicted value of the regression equation for each X in the dataset. We can then use this regression equation to calculate $SS\_T$ and $SS\_R$ using the same formula above.
 ```r
