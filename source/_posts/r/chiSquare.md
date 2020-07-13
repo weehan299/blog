@@ -9,8 +9,7 @@ categories:
 intro: "Applying Chi Square statistic in R"
 comments: false
 ---
-
-These notes are posted here for my own easy navigation or for any one who is interested in learning R. Most of these examples are not my own, although i may inject some of my own code into it for more elaboration. The examples below are from the textbook "Learning Statistics with R" by [Danielle Navarro](https://djnavarro.net/) which i found to be a very helpful resource for those who wants to transition from SPSS to R. The codes are similar to the textbook with the exception when the author uses her own R package ([lsr](https://cran.r-project.org/web/packages/lsr/index.html)) to demonstrate the example, I would try to figure out the way to implement the test without using the package. 
+The examples below are from the textbook "Learning Statistics with R" by [Danielle Navarro](https://djnavarro.net/) which i found to be a very helpful resource for those who wants to transition from SPSS to R. The codes are similar to the textbook with the exception when the author uses her own R package ([lsr](https://cran.r-project.org/web/packages/lsr/index.html)) to demonstrate the example, I would try to figure out the way to implement the test without using the package. 
 
 The datasets that I referenced below can be found [here](https://learningstatisticswithr.com/data.zip)
 

@@ -11,6 +11,7 @@ comments: false
 
 ## Here was how I get started on creating my first static website!
 
+Creating your own website is a great way to start to learn the basics of web development. Also, being able to carve out a space on the internet that is genuinely your own is also wonderful. The post below will describe my process of how I get started create a website without the use of  a template website builder.
 
 ### Setting up a VPS Server
 I use an VPS server to store the static files of my website. All you need to do is to find any VPS hosting services online. I use [vultr](https://www.vultr.com/) which has a very user friendly set up process. 
